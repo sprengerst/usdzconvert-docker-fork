@@ -51,7 +51,7 @@ RUN git clone --branch "${USD_RELEASE}" --depth 1 https://github.com/PixarAnimat
 # RUN python ./build_scripts/build_usd.py --build-monolithic --verbose --prefer-safety-over-speed --no-examples --no-tutorials --no-imaging --no-usdview --draco "${USD_INSTALL}" && \
 #   rm -rf "${USD_REPO}" "${USD_INSTALL}/build" "${USD_INSTALL}/src"
 
-RUN python ./build_scripts/build_usd.py --no-examples --no-tutorials --no-imaging --no-usdview --no-draco "${USD_INSTALL}" && \
+RUN python ./build_scripts/build_usd.py --no-examples --no-tutorials --no-imaging --no-usdview --draco "${USD_INSTALL}" && \
   rm -rf "${USD_REPO}" "${USD_INSTALL}/build" "${USD_INSTALL}/src"
 
 RUN python -m pip install numpy
